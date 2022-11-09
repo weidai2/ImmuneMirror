@@ -14,10 +14,12 @@ We developed ImmuneMirror, a multi-omics data analysis bioinformatics pipeline t
     * Docker version: Platform of your choice.
     - Bash version: Linux, we run this pipeline under Ubuntu 20.04 LTS.
     - Hardware:
-        Minimum: 8-core processor, 32 GB RAM
+        Minimum: 16-core processor, 64 GB RAM
+        Optimal: 32-core processor, 128 GB RAM
     - Disk space:
-        Reference files: 328 GB
-        Results: around 45 GB, for one sample
+        Docker image: 79.6 GB 
+        Reference files: 483 GB
+        Results: around 41 GB, for one patient sample
        
 
 ## How to use:
@@ -65,7 +67,7 @@ We developed ImmuneMirror, a multi-omics data analysis bioinformatics pipeline t
 Now, run the commands below to process the example samples:
 
 ```
-disease_type=No \
+disease_type=CRC \
 thread=13 \
    sudo docker run \
     -v {your_working_directory}/ImmuneMirror/:/var/pipeline/ \
@@ -75,10 +77,10 @@ thread=13 \
      immunemirror:1.0 ./ImmuneMirror.sh $disease_type $thread 
  ```
      
-6. Now run the pipeline using "real-life" samples.
+6. Now run can the pipeline using "real-life" samples.
     
    Firstly, you need to edit the {working_directory}/ImmuneMirror/sample.list file by replacing with your own sample list.
-   Inside the 'sample.list' file, "YES" indicates the sample has both WES and RANSeq files, and "NO" indicates the sample has only WES sequecing file.
+   Inside the 'sample.list' file, "YES" indicates the patient has both WES and RANSeq files, and "NO" indicates the patient has only WES sequecing file.
    
    Available disease types: ESCC, CRC, and HCC, and No for other types.
    Now, run the following commnads to process you samples:
