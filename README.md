@@ -48,7 +48,7 @@ We developed ImmuneMirror, a multi-omics data analysis bioinformatics pipeline t
   ```
   
   #### Way 2:
-  You may directly clone the master repository from the [GitHub](https://github.com/weidai2/ImmuneMirror/), unzip it and rename as ImmuneMirror
+  You can directly clone the master repository from the [GitHub](https://github.com/weidai2/ImmuneMirror/), unzip it and rename as ImmuneMirror
   
   Now your working environment is ready!
 
