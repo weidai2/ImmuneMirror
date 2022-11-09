@@ -36,7 +36,7 @@ We developed ImmuneMirror, a multi-omics data analysis bioinformatics pipeline t
 3. Download and unzip the pipeline's repository from Github:
   
   #### Way 1: 
-  Copy [im_install.sh](https://github.com/sarwarchy20/ImmuneMirror/blob/master/im_install.sh) to your local computer and set you working directory's path inside the im_install.sh script by editing the following line:
+  Copy [im_install.sh](https://github.com/weidai2/ImmuneMirror/blob/master/im_install.sh) to your local computer and set you working directory's path inside the im_install.sh script by editing the following line:
   ```
   working_directory=/Porvide/PATH/TO/YOUR_WORKING_DIRECTORY 
   ```
@@ -48,7 +48,7 @@ We developed ImmuneMirror, a multi-omics data analysis bioinformatics pipeline t
   ```
   
   #### Way 2:
-  You may directly clone the master repository from the [GitHub](https://github.com/sarwarchy20/ImmuneMirror/), unzip it and rename as ImmuneMirror
+  You may directly clone the master repository from the [GitHub](https://github.com/weidai2/ImmuneMirror/), unzip it and rename as ImmuneMirror
   
   Now your working environment is ready!
 
