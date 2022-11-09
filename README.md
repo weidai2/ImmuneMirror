@@ -80,11 +80,11 @@ thread=13 \
 6. Now run can the pipeline using "real-life" samples.
     
    Firstly, you need to edit the {working_directory}/ImmuneMirror/sample.list file by replacing with your own sample list.
-   Inside the 'sample.list' file, "YES" indicates the patient has both WES and RANSeq files, and "NO" indicates the patient has only WES sequecing file.
+   Inside the 'sample.list' file, "YES" indicates the patient has both WES and RANSeq files, and "NO" indicates the patient has only WES sequecing file. 'N' and       'T' represents Normal and Tumor sample, respectively.
    
-   Available disease types: ESCC, CRC, and HCC, and No for other types.
+   Available disease types: ESCC (Esophageal squamous cell carcinoma), CRC (Colorectal cancer), and HCC (Hepatocellular carcinoma), and No for other cancer/disease    types.
    Now, run the following commnads to process you samples:
-   
+
 ```
 disease_type={your_sample_disease_type} \
 thread=13 \
