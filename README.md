@@ -8,7 +8,7 @@
 We developed ImmuneMirror, a multi-omics data analysis bioinformatics pipeline to access the key genomic and transcriptomic features associated with the response of cancer immunotherapy. The pipeline was built as a docker container that can be run in any docker supported operating system such as Linux, Mac and Windows. We incorporated a machine-learning model in the pipeline, to evaluate each mutated peptide and aggregates significant biological features for neoantigen prediction and prioritization. The analysis pipeline incorporates the benchmark tools for identifying the germline and somatic mutations, evaluation of microsatellite instability (MSI), HLA typing, and neoantigen prediction and  for HLA Class I and II based on the whole-exome sequencing (WES) and RNA-Seq data. The pipeline required FASTQ input of matched normal-tumor WES samples and tumor bulk RNA-seq sample. In addition, the pipeline produces a two-page long graphical analysis report for the user sample(s).
 
 ## Abstract
-
+We developed ImmuneMirror as stand-alone open-source pipeline (https://github.com/weidai2/ImmuneMirror/), it's required FASTQ input of matched normal-tumor WES samples and tumor bulk RNA-seq sample (RNA-seq is optional). If you have VCF file (somatic mutations identified by Mutect2), you can use the ImmuneMirror web server (http://immunemirror.hku.hk/App/). 
 ## System Requirements
 
     * Docker version: Platform of your choice.
