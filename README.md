@@ -1,4 +1,4 @@
-# ImmuneMirror: A Machine Learning-based Pipeline for Neoantigen Prediction Using Genomics and Transcriptomics Features
+# ImmuneMirror: A Machine Learning-based Pipeline for Neoantigen Prediction Using Genomic and Transcriptomic Features
 
 <img src=im_logo.jpg height="200">
 
