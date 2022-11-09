@@ -211,7 +211,7 @@ then
 	pipeline=$dir/pipeline/mutation/funcotator_script.sh
 	bash $pipeline $tumor $work_dir $output $thread 1>$logs/${processDay}_${tumor}.funcotator 2>&1
    
-   #--------------------------- V 1.3 -------------------------------------------------------- 
+   #--------------------------- VEP -------------------------------------------------------- 
    echo ${currentTime}"\tstart VEP......................................."
       type=$disease_type
         RNA_on=$RNASeq_output/salmon/${tumor}/quant.id.sf
