@@ -10,4 +10,4 @@
   wget https://github.com/weidai2/ImmuneMirror/archive/master.zip
   unzip master.zip
   rm master.zip
-  mv ImmuneMirror-master ${working_directory}/ImmuneMirror
+  mv ImmuneMirror-main ${working_directory}/ImmuneMirror
