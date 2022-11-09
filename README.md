@@ -1,4 +1,4 @@
-# ImmuneMirror: Integrative Multi-Omics Data Analysis Pipeline for Idetifying Key Features For Cancer
+# ImmuneMirror: A Machine Learning-based Pipeline for Neoantigen Prediction Using Genomics and Transcriptomics Features
 
 <img src=im_logo.jpg height="200">
 
