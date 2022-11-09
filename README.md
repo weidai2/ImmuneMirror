@@ -1,7 +1,9 @@
 # ImmuneMirror: Integrative Multi-Omics Data Analysis Pipeline for Idetifying Key Features For Cancer
 
+<img src=im_logo.jpg height="200">
+
 ## Overview
-The ImmuneMirror, a multi-omics data analysis bioinformatics pipeline for identifying the key genomic and transcriptomic features associated with response of cancer immunotherapy. We developed the ImmuneMirror as a Docker (http://www.docker.com) container image, a platform-independent tool that can be run on any Docker supported machines including Linux, Mac, and Windows OS platforms. The analysis pipeline incorporates the benchmark tools for identifying the germline and somatic mutations, evaluation of microsatellite instability (MSI), HLA typing, and neoantigen prediction for HLA Class I and II based on the whole-exome sequencing (WES) and RNA-Seq data.
+We developed ImmuneMirror, a multi-omics data analysis bioinformatics pipeline to access the key genomic and transcriptomic features associated with the response of cancer immunotherapy. The pipeline was built as a docker container that can be run in any docker supported operating system such as Linux, Mac and Windows. We incorporated a machine-learning model in the pipeline, to evaluate each mutated peptide and aggregates significant biological features for neoantigens prediction and prioritization. The analysis pipeline incorporates the benchmark tools for identifying the germline and somatic mutations, evaluation of microsatellite instability (MSI), HLA typing, and neoantigen prediction and  for HLA Class I and II based on the whole-exome sequencing (WES) and RNA-Seq data. The pipeline required FASTQ input of matched normal-tumor WES samples and tumor bulk RNA-seq sample. In addition, the pipeline generates a two-page long graphical analysis report for user sample.
 
 ## Abstract
 
@@ -13,7 +15,7 @@ The ImmuneMirror, a multi-omics data analysis bioinformatics pipeline for identi
         Minimum: 8-core processor, 32 GB RAM
     - Disk space:
         Reference files: 328 GB
-        Results: 
+        Results: around 45 GB, for one sample
        
 
 ## How to use:
@@ -30,7 +32,7 @@ The ImmuneMirror, a multi-omics data analysis bioinformatics pipeline for identi
 3. Download and unzip the pipeline's repository from Github:
   
   #### Way 1: 
-  Copy [im_install.sh](https://github.com/weidai2/ImmuneMirror/blob/master/im_install.sh) to your local computer and set you working directory's path inside the im_install.sh script by editing the following line:
+  Copy [im_install.sh](https://github.com/sarwarchy20/ImmuneMirror/blob/master/im_install.sh) to your local computer and set you working directory's path inside the im_install.sh script by editing the following line:
   ```
   working_directory=/Porvide/PATH/TO/YOUR_WORKING_DIRECTORY 
   ```
@@ -42,7 +44,7 @@ The ImmuneMirror, a multi-omics data analysis bioinformatics pipeline for identi
   ```
   
   #### Way 2:
-  You may directly clone the master repository from the [GitHub](https://github.com/weidai2/ImmuneMirror/), unzip it and rename as ImmuneMirror
+  You may directly clone the master repository from the [GitHub](https://github.com/sarwarchy20/ImmuneMirror/), unzip it and rename as ImmuneMirror
   
   Now your working environment is ready!
 
@@ -57,35 +59,41 @@ The ImmuneMirror, a multi-omics data analysis bioinformatics pipeline for identi
    RNASeq_directory=/PATH/TO/YOUR/RNASeq_DIRECTOR
    Reference_files_directory=/PATH/TO/Reference_file_directory
    ```
-   Now, run the commands below to process the example samples:
-   ```
+   
+Now, run the commands below to process the example samples:
+
+```
+disease_type=No \
+thread=13 \
    sudo docker run \
     -v {your_working_directory}/ImmuneMirror/:/var/pipeline/ \
     -v {WES_directory}:/var/pipeline/WES \
     -v {RNASeq_directory}:/var/pipeline/RNASeq \
     -v {Reference_files_directory}/:/var/pipeline/Ref/ \
-     immunemirror:1.0
-     ```
+     immunemirror:1.0 ./ImmuneMirror.sh $disease_type $thread 
+ ```
+     
 6. Now run the pipeline using "real-life" samples.
     
    Firstly, you need to edit the {working_directory}/ImmuneMirror/sample.list file by replacing with your own sample list.
-   Inside the 'sample.list' file, "YES" indicates the sample has both WES and RANSeq files, and "NO" indicates the sample has only WES sequecing data file.
+   Inside the 'sample.list' file, "YES" indicates the sample has both WES and RANSeq files, and "NO" indicates the sample has only WES sequecing file.
    
+   Available disease types: ESCC, CRC, and HCC, and No for other types.
    Now, run the following commnads to process you samples:
    
-   ```
+```
+disease_type={your_sample_disease_type} \
+thread=13 \
     sudo docker run \
     -v {your_working_directory}/ImmuneMirror/:/var/pipeline/ \
     -v {WES_directory}:/var/pipeline/WES \
     -v {RNASeq_directory}:/var/pipeline/RNASeq \
     -v {Reference_files_directory}/:/var/pipeline/Ref/ \
-     immunemirror:1.0
-   ```
-# Pipeline Outputs
- Output directories descriptions: [download link](http://immunemirror.hku.hk/doc/outputs.pdf)
-
+     immunemirror:1.0 ./ImmuneMirror.sh $disease_type $thread
+```
+  
 # Bug reports
-Please send comments and bug reports to: sarwar2@hku.hk
+Please send comments and bug reports to: sarwar20@hku.hk
 
 # Citation
 Please cite 
