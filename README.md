@@ -1,5 +1,5 @@
 
-# ImmuneMirror: a Machine Learning-based Integrative Pipeline and Web Server for Neoantigen Prediction
+# ImmuneMirror: A Machine Learning-based Integrative Pipeline and Web Server for Neoantigen Prediction
 
 
 <img src=im_logo.jpg height="200">
