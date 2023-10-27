@@ -58,7 +58,7 @@
   
   neo_classII_file=$work_dir/pvac_phlat_output/${tumor}/MHC_Class_II/${tumor}.features.tsv
   if test -f "$neo_classII_file"; then
-      if [[ -s "$neo_classI_file" ]]; then
+      if [[ -s "$neo_classII_file" ]]; then
         neo_classII=$work_dir/pvac_phlat_output/${tumor}/MHC_Class_II/${tumor}.features.tsv # nrow
       else
         neo_classII='N'
