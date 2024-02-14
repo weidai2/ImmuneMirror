@@ -100,7 +100,7 @@ thread=13 \
 Please send comments and bug reports to: sarwar20@hku.hk
 
 # Citation
-Chuwdhury GS, Guo Y, Chiang CL, Lam KO, Kam NW, Liu Z, Dai W. ImmuneMirror: A machine learning-based integrative pipeline and web server for neoantigen prediction. Brief Bioinform. 2024 Jan 22;25(2):bbae024. [doi: 10.1093/bib/bbae024](doi: 10.1093/bib/bbae024). PMID: 38343325; PMCID: PMC10859690.
+Chuwdhury GS, Guo Y, Chiang CL, Lam KO, Kam NW, Liu Z, Dai W. ImmuneMirror: A machine learning-based integrative pipeline and web server for neoantigen prediction. Brief Bioinform. 2024 Jan 22;25(2):bbae024. [doi: 10.1093/bib/bbae024](https://academic.oup.com/bib/article/25/2/bbae024/7606138?login=false). PMID: 38343325; PMCID: PMC10859690.
 
 # License
 The program is distributed under the GPL-3.0 license.
